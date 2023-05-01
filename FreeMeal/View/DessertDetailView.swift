@@ -2,7 +2,7 @@
 //  DessertDetailView.swift
 //  FreeMeal
 //
-//  Created by 김창현 on 4/24/23.
+//  Created by Changhyun Kim on 4/24/23.
 //
 
 import SwiftUI
@@ -72,16 +72,6 @@ struct DessertDetailView: View {
                 .fontWeight(.bold)
                 
             }
-            
-//                VStack(alignment: .center) {
-//                    Text("Ingredients")
-//                        .fontWeight(.bold)
-//                    LazyVGrid(columns: columns, alignment: .leading) {
-//                        ForEach(dessertDetailVM.ingredients, id: \.self) { ingredient in
-//                            IngredientSquare(text: ingredient)
-//                        }
-//                    }
-//                }.padding([.leading, .trailing], 20)
             
             VStack {
                 Text("Instruction")

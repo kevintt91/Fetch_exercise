@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  FreeMeal
 //
-//  Created by 김창현 on 4/24/23.
+//  Created by Changhyun Kim on 4/24/23.
 //
 
 import SwiftUI

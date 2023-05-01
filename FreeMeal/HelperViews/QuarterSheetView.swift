@@ -2,7 +2,7 @@
 //  QuarterSheetView.swift
 //  FreeMeal
 //
-//  Created by 김창현 on 4/27/23.
+//  Created by Changhyun Kim on 4/27/23.
 //
 
 import SwiftUI
