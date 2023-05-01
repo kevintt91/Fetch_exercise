@@ -22,7 +22,18 @@
 		C62E263829F77D6300F1B6D8 /* DessertDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62E263729F77D6300F1B6D8 /* DessertDetailView.swift */; };
 		C697B13329F9D3D600941C8B /* IngredientSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697B13229F9D3D600941C8B /* IngredientSquare.swift */; };
 		C697B13529FB29D300941C8B /* QuarterSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697B13429FB29D300941C8B /* QuarterSheetView.swift */; };
+		C6AEA4F329FF840000C42274 /* NetworkingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AEA4F229FF840000C42274 /* NetworkingTest.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C697B13E29FB311700941C8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C62E260829F7054200F1B6D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C62E260F29F7054200F1B6D8;
+			remoteInfo = FreeMeal;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C62E261029F7054200F1B6D8 /* FreeMeal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeMeal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,10 +53,19 @@
 		C62E263729F77D6300F1B6D8 /* DessertDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetailView.swift; sourceTree = "<group>"; };
 		C697B13229F9D3D600941C8B /* IngredientSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientSquare.swift; sourceTree = "<group>"; };
 		C697B13429FB29D300941C8B /* QuarterSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuarterSheetView.swift; sourceTree = "<group>"; };
+		C697B13A29FB311700941C8B /* FreeMealTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreeMealTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6AEA4F229FF840000C42274 /* NetworkingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C62E260D29F7054200F1B6D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C697B13729FB311700941C8B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -67,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				C62E261029F7054200F1B6D8 /* FreeMeal.app */,
+				C697B13A29FB311700941C8B /* FreeMealTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,6 +107,7 @@
 				C62E263329F73F2F00F1B6D8 /* DessertDetailScreen.swift */,
 				C62E261729F7054600F1B6D8 /* Assets.xcassets */,
 				C62E261929F7054600F1B6D8 /* Preview Content */,
+				C6CF104D29FF90120012FA78 /* FreeMealTests */,
 			);
 			path = FreeMeal;
 			sourceTree = "<group>";
@@ -150,6 +172,14 @@
 			path = HelperViews;
 			sourceTree = "<group>";
 		};
+		C6CF104D29FF90120012FA78 /* FreeMealTests */ = {
+			isa = PBXGroup;
+			children = (
+				C6AEA4F229FF840000C42274 /* NetworkingTest.swift */,
+			);
+			path = FreeMealTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,6 +200,24 @@
 			productReference = C62E261029F7054200F1B6D8 /* FreeMeal.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C697B13929FB311700941C8B /* FreeMealTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C697B14029FB311700941C8B /* Build configuration list for PBXNativeTarget "FreeMealTests" */;
+			buildPhases = (
+				C697B13629FB311700941C8B /* Sources */,
+				C697B13729FB311700941C8B /* Frameworks */,
+				C697B13829FB311700941C8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C697B13F29FB311700941C8B /* PBXTargetDependency */,
+			);
+			name = FreeMealTests;
+			productName = FreeMealTests;
+			productReference = C697B13A29FB311700941C8B /* FreeMealTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -182,6 +230,11 @@
 				TargetAttributes = {
 					C62E260F29F7054200F1B6D8 = {
 						CreatedOnToolsVersion = 14.3;
+					};
+					C697B13929FB311700941C8B = {
+						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
+						TestTargetID = C62E260F29F7054200F1B6D8;
 					};
 				};
 			};
@@ -199,6 +252,7 @@
 			projectRoot = "";
 			targets = (
 				C62E260F29F7054200F1B6D8 /* FreeMeal */,
+				C697B13929FB311700941C8B /* FreeMealTests */,
 			);
 		};
 /* End PBXProject section */
@@ -210,6 +264,13 @@
 			files = (
 				C62E261B29F7054600F1B6D8 /* Preview Assets.xcassets in Resources */,
 				C62E261829F7054600F1B6D8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C697B13829FB311700941C8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,7 +297,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C697B13629FB311700941C8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6AEA4F329FF840000C42274 /* NetworkingTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C697B13F29FB311700941C8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C62E260F29F7054200F1B6D8 /* FreeMeal */;
+			targetProxy = C697B13E29FB311700941C8B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C62E261C29F7054600F1B6D8 /* Debug */ = {
@@ -413,6 +490,47 @@
 			};
 			name = Release;
 		};
+		C697B14129FB311700941C8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UXC22S2JSY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ck.FreeMealTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FreeMeal.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FreeMeal";
+			};
+			name = Debug;
+		};
+		C697B14229FB311700941C8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UXC22S2JSY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ck.FreeMealTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FreeMeal.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FreeMeal";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -430,6 +548,15 @@
 			buildConfigurations = (
 				C62E261F29F7054600F1B6D8 /* Debug */,
 				C62E262029F7054600F1B6D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C697B14029FB311700941C8B /* Build configuration list for PBXNativeTarget "FreeMealTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C697B14129FB311700941C8B /* Debug */,
+				C697B14229FB311700941C8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

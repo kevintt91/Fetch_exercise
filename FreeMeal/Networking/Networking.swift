@@ -7,13 +7,17 @@
 
 import Foundation
 
+protocol NetworkingProtocol {
+    func getAllDessert(completion: @escaping (Result<[Dessert], NetworkError>) -> Void)
+}
+
 enum NetworkError: Error {
     case badURL
     case decodingError
     case NoDataFound
 }
 
-class Networking {
+class Networking: NetworkingProtocol {
     
     func getAllDessert(completion: @escaping (Result<[Dessert], NetworkError>) -> Void) {
         
@@ -47,10 +51,6 @@ class Networking {
             guard let data = data, error == nil else {
                 return completion(.failure(.NoDataFound))
             }
-            
-//            guard let dessertDetail = try? JSONDecoder().decode(DessertDetail.self, from: data) else {
-//                return completion(.failure(.decodingError))
-//            }
             
             guard let dessertDetailResponse = try? JSONDecoder().decode(DessertDetailResponse.self, from: data),
                   let dessertDetail = dessertDetailResponse.meals.first else {

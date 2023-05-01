@@ -12,17 +12,22 @@ class DessertListViewModel: ObservableObject {
     @Published var desserts = [DessertViewModel]()
     
     let networking = Networking()
+    let networkingTest: NetworkingProtocol
+    
+    init (networkingTest: NetworkingProtocol = Networking()) {
+        self.networkingTest = networkingTest
+    }
     
     func getAllDesserts() {
-        networking.getAllDessert { result in
-            switch result {
-            case .success(let dessertss):
-                DispatchQueue.main.async {
-                    self.desserts = dessertss.map(DessertViewModel.init)
+        networking.getAllDessert { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let dessertss):
+                    self?.desserts = dessertss.map(DessertViewModel.init)
+                    
+                case .failure(let error):
+                    print(error.localizedDescription)
                 }
-                
-            case .failure(let error):
-                print(error.localizedDescription)
             }
         }
     }
